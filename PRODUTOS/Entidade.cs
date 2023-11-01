@@ -5,7 +5,7 @@ namespace PRODUTOS
     {
         public Guid Id { get; set; }
 
-        protected Entidade(Guid id)
+        protected Entidade()
         {
             Id = Guid.NewGuid();
         }

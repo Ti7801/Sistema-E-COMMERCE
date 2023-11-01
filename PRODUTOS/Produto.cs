@@ -14,7 +14,7 @@ namespace PRODUTOS
         public Categoria Categoria { get; set; }    
 
 
-        public Produto(Guid id, string nome, string descricao, bool ativo, decimal valor, DateTime dataCadastro, int quantidadeEstoque, Dimensões dimensoes, Categoria categoria) : base(id)
+        public Produto(string nome, string descricao, bool ativo, decimal valor, DateTime dataCadastro,               int quantidadeEstoque, Dimensões dimensoes, Categoria categoria) 
         {
             Nome = nome;
             Descricao = descricao;
@@ -24,18 +24,16 @@ namespace PRODUTOS
             QuantidadeEstoque = quantidadeEstoque;
             Dimensoes = dimensoes;
             Categoria = categoria;
-            Id = id;
-
         }
 
         public void Ativar()
         {
-
+            Ativo = true;
         }
 
         public void Desativar()
         {
-
+            Ativo = false;   
         }
 
         public void AlterarCategoria(Categoria novaCategoria)
@@ -55,7 +53,7 @@ namespace PRODUTOS
 
         public void ReporEstoque(int quantidade)
         {
-
+            
         }
         public bool PossuiEstoque(int quantidade)
         {

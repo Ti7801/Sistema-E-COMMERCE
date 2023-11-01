@@ -4,14 +4,15 @@ namespace PRODUTOS
     internal class Categoria
     {
         public string Nome { get; set; }
-        public int Codigo { get; private set; }
-        public List<Produto> produtos { get; private set; }
+        public int Codigo { get;  set; }
+        public List<Produto> Produtos { get; set; }
 
+        
         public Categoria(string nome, int codigo) 
         {
             Nome = nome;
             Codigo = codigo;
-            produtos = new List<Produto>();
+            Produtos = new List<Produto>();
         }
 
         public override string ToString()
