@@ -38,25 +38,29 @@ namespace PRODUTOS
 
         public void AlterarCategoria(Categoria novaCategoria)
         {
-
+            Categoria = novaCategoria;
         }
 
         public void AlterarDescricao(string novaDescricao)
         {
-
+            Descricao = novaDescricao;   
         }
 
         public void DebitarEstoque(int quantidade)
         {
-
+            QuantidadeEstoque = QuantidadeEstoque - quantidade; 
         }
 
         public void ReporEstoque(int quantidade)
         {
-            
+            QuantidadeEstoque = QuantidadeEstoque + quantidade;
         }
         public bool PossuiEstoque(int quantidade)
         {
+            if (QuantidadeEstoque == quantidade)
+            {
+                return true;    
+            }
             return false;
         }
     }
